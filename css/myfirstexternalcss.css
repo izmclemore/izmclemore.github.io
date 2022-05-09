@@ -1,0 +1,62 @@
+
+h1 {
+  color: red;
+}
+p {
+  color: blue;
+}
+#p1 {
+  font-style: italic;
+}
+.boldText {
+  font
+  weight: bold;
+}
+
+.card {
+  background-color: lightgrey;
+  border: 5px solid gray;
+  border-radius: 10px;
+  /* offset-x, offset-y, blur-radius, spread-radius, color */
+  /* rgba -> r: 0-255, g: 0-255, b: 0-255, a: 0-1 */
+  box-shadow: 10px 10px 12px 4px rgba(0, 0, 0, 0.5);
+  margin: 24px;
+  padding: 48px;
+}
+
+body {
+  background: linear-gradient(to bottom, red, yellow, orange, pink);
+  height: 100vh;
+}
+
+.button {
+  background: linear-gradient(to right, red 50%, blue, green 60%);
+  border: 3px solid darkgreen;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 12px;
+  padding: 12px 24px;
+
+}
+
+/*pseudo-class*/
+.button:hover {
+    opacity: 0.8;
+}
+
+.button:active {
+  background: linear-gradient(to bottom, forestgreen, lightgreen);
+}
+
+
+
+
+
+
+
+
+
+
+
+.blah{}
