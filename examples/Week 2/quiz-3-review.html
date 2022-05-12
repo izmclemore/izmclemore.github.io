@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Quiz 3 Review</title>
+    <style>
+      .padding1Values {
+        /* 1 value gets set to all 4 sides */
+        padding: 24px;
+      }
+      .padding2Values {
+         /*1st value sets top/bottom*/
+        /* 2nd value sets left/right*/
+         padding: 12px 36px;
+      }
+      .padding3Values {
+        /*1st value sets the top*/
+        /*2nd value sets left/right*/
+        /*3rd value sets bottom*/
+        padding: 12px 24px 36px;
+      }
+      .padding4Values {
+        /*1st value sets top, then goes clockwise*/
+        padding: 12px 24px 36px 72px;
+      }
+      .box {
+        background-color: skyblue;
+        border: 1px solid black;
+        display: inline-block;
+      }
+      .br1Values {
+        /* 1 value gets set to all 4 corners*/
+        border-radius: 12px;
+      }
+      .br2Values {
+        /* 1st value sets top-left/bottom-right*/
+        /* 2nd value sets top-right/botton-left*/
+        border-radius: 12px 36px;
+      }
+      .br3Values {
+        /* 1st value sets top-left*/
+        /* 2nd value sets top-right/bottom left*/
+        /* 3rd value sets bottom-right*/
+        border-radius: 12px 36px 0px;
+      }
+      .br4Values {
+        /* 1st value sets top-left*/
+        /* other corners get set clockwise*/
+        border-radius: 12px 50% 36px 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class=" box padding1Values">Padding 1 Value</div>
+    <div class=" box padding2Values">Padding 2 Value</div>
+    <div class=" box padding3Values">Padding 3 Value</div>
+    <div class=" box padding4Values">Padding 4 Value</div>
+    <br>
+    <div class="box br1Values">Border Radius 1 Values</div>
+    <div class="box br1Values">Border Radius 1 Values</div>
+    <div class="box br1Values">Border Radius 1 Values</div>
+    <div class="box br1Values">Border Radius 1 Values</div>
+
+  </body>
+</html>
