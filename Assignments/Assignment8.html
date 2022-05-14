@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Semantic Layout</title>
+      <style>
+        #header,
+        #footer {
+          background-color: blueviolet;
+          color: indigo;
+          font-family: Verdana;
+          text-align: center;
+          padding-top: 12px;
+          padding-bottom: 8px
+        }
+        #main {
+          background-color: mediumpurple;
+          padding: 24px;
+        }
+        #nav {
+          background-color: mediumpurple;
+        }
+        #nav ul li {
+          list-style-type:none;
+          display: inline-block;
+          padding: 8px;
+        }
+        #nav ul li a {
+          color: plum;
+        }
+        .section1,
+        .section2 {
+          background-color: mediumslateblue;
+          margin: 36px
+        }
+          </style>
+  </head>
+  <body>
+    <header id="header">
+      <h1>Purple Flurp</h1>
+    </header>
+    <nav id="nav">
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </nav>
+    <main id="main">
+      <h2>MAIN SECTION</h2>
+        <section class="section1">Nested section 1</section>
+        <section class="section2">Nested section 2</section>
+
+    </main>
+    <footer id="footer">FOOTER</footer>
+  </body>
+</html>

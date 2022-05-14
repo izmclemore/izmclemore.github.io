@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Div Layout</title>
+      <style>
+        #header,
+        #footer {
+          background-color: blueviolet;
+          color: indigo;
+          font-family: Verdana;
+          text-align: center;
+          padding-top: 12px;
+          padding-bottom: 8px
+        }
+        #main {
+          background-color: mediumpurple;
+          padding: 24px;
+        }
+        #nav {
+          background-color: mediumpurple;
+        }
+        #nav ul li {
+          list-style-type:none;
+          display: inline-block;
+          padding: 8px;
+        }
+        #nav ul li a {
+          color: plum;
+        }
+        .section1,
+        .section2 {
+          background-color: mediumslateblue;
+          margin: 36px
+        }
+          </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Purple Flurp</h1>
+    </div>
+    <div id="nav">
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </div>
+    <div id="main">
+      <h2>MAIN SECTION</h2>
+        <div class="section1">Nested section 1</div>
+        <div class="section2">Nested section 2</div>
+
+    </div>
+    <div id="footer">FOOTER</div>
+  </body>
+</html>
