@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Layouts: Table vs Float</title>
+    <style>
+      /* <!-- CSS common to both layouts --> */
+      .header {
+        background-color: lightgreen;
+        padding: 12px 24px;
+      }
+      .nav {
+        padding: 12px 24px;
+      }
+      .content {
+        padding: 36px;
+      }
+      .footer {
+        background-color: green;
+        padding: 12px 24px;
+      }
+
+      /* <!-- CSS specific to the table layout --> */
+      #oldTableLayout {
+          border-collapse: collapse;
+          margin-bottom: 48px;
+      }
+      #oldTableLayout .nav {
+        background-color: #DDFFDD;
+
+      }
+      img.cat {
+        float: right;
+        width: 300px;
+        margin-left: 12px;
+      }
+      img.cartoonCat {
+        float : left;
+        width: 300px;
+        margin-right: 12px;
+      }
+      .clear {
+        clear: both;
+        margin: 48px;
+      }
+      /* CSS specific to Float layout */
+      #oldfLoatLayout .nav {
+        box-sizing: border-box;
+        float: left;
+        width: 20%;
+      }
+      #oldFloatLayout .content {
+        box-sizing: border-box;
+        float: left;
+        width: 80%;
+      }
+      #oldFLoatLayout .main {
+        background: linear-gradient(to right, #DDFFDD 20%, white 20.0001%);
+      }
+      /* This is the clear fix */
+      #oldFloatLayout .main:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="oldTableLayout">
+      <tr>
+        <td class="header" colspan="2">
+          <h1>This is how page layouts used to be done (with tables)</h1>
+        </td>
+      </tr>
+      <tr>
+        <td class="nav">
+          <div><a href="#">Home</a></div>
+          <div><a href="#">Gallery</a></div>
+          <div><a href="#">About Me</a></div>
+          <div><a href="#">Contact</a></div>
+        </td>
+        <td class="content">
+          <img class="cat" src="../../images/FancyKitty.jpg" alt="kitty">
+          <p>
+            Anim fabulas ut eruditionem. Magna mentitum imitarentur ex ipsum ingeniis litteris ut senserit eu quis offendit si qui ubi efflorescere quo dolore mentitum qui culpa minim eu ita magna quo anim,
+            dolore a ubi eram mandaremus do singulis export appellat. Veniam ingeniis ab vidisse ut e enim et quid si tamen arbitror occaecat, cernantur fore o laborum fidelissimae et nisi si ne dolor officia iis
+            qui noster quibusdam, esse ut occaecat ad legam ne aut singulis id commodo.Dolor consequat ea pariatur. Export laboris eu incididunt ne deserunt fore eram qui culpa ut occaecat velit quorum a veniam
+            de irure incididunt efflorescere. Nam in cillum summis summis. Pariatur aute magna laboris duis an multos relinqueret offendit aute probant non cernantur coniunctione iis cernantur, excepteur amet
+            nulla cernantur dolore.
+          </p>
+          <div class="clear"></div>
+          <img class="cartoonCat" src="../../images/images.jpg" alt="white cat">
+          <p>
+            Labore iis incurreret et quorum, cillum aliquip mandaremus. Cernantur velit quis e velit do quid constias hic expetendis, sed quorum mandaremus concursionibus eu aute possumus e labore multos. Non
+            velit laborum praetermissum non quo dolor commodo relinqueret ex quis et nostrud si nam cupidatat praesentibus, quid ingeniis an appellat eu ad magna laboris ita officia imitarentur ea laboris do e
+            tamen commodo laboris.Fugiat officia ab ullamco o ex admodum aut commodo. Ipsum commodo sed legam nulla nam export commodo hic cillum amet. Aut irure offendit e noster do est nisi officia, mandaremus
+            nulla probant laboris ex quibusdam legam eu occaecat exercitation.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="footer" colspan="2">
+          copyright &copy; Kitty Galores 2022
+        </td>
+      </tr>
+    </table>
+
+    <div id="oldFloatLayout">
+      <div class="header">
+        <h1>This is how page layouts used to be done (with floats)</h1>
+      </div>
+      <div class="main">
+        <div class="nav">
+          <div><a href="#">Home</a></div>
+          <div><a href="#">Gallery</a></div>
+          <div><a href="#">About Me</a></div>
+          <div><a href="#">Contact</a></div>
+        </div>
+        <div class="content">
+          <img class="cat" src="../../images/FancyKitty.jpg" alt="kitty">
+          <p>
+            Anim fabulas ut eruditionem. Magna mentitum imitarentur ex ipsum ingeniis litteris ut senserit eu quis offendit si qui ubi efflorescere quo dolore mentitum qui culpa minim eu ita magna quo anim,
+            dolore a ubi eram mandaremus do singulis export appellat. Veniam ingeniis ab vidisse ut e enim et quid si tamen arbitror occaecat, cernantur fore o laborum fidelissimae et nisi si ne dolor officia iis
+            qui noster quibusdam, esse ut occaecat ad legam ne aut singulis id commodo.Dolor consequat ea pariatur. Export laboris eu incididunt ne deserunt fore eram qui culpa ut occaecat velit quorum a veniam
+            de irure incididunt efflorescere. Nam in cillum summis summis. Pariatur aute magna laboris duis an multos relinqueret offendit aute probant non cernantur coniunctione iis cernantur, excepteur amet
+            nulla cernantur dolore.
+          </p>
+          <div class="clear"></div>
+          <img class="cartoonCat" src="../../images/images.jpg" alt="white cat">
+          <p>
+            Labore iis incurreret et quorum, cillum aliquip mandaremus. Cernantur velit quis e velit do quid constias hic expetendis, sed quorum mandaremus concursionibus eu aute possumus e labore multos. Non
+            velit laborum praetermissum non quo dolor commodo relinqueret ex quis et nostrud si nam cupidatat praesentibus, quid ingeniis an appellat eu ad magna laboris ita officia imitarentur ea laboris do e
+            tamen commodo laboris.Fugiat officia ab ullamco o ex admodum aut commodo. Ipsum commodo sed legam nulla nam export commodo hic cillum amet. Aut irure offendit e noster do est nisi officia, mandaremus
+            nulla probant laboris ex quibusdam legam eu occaecat exercitation.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        copyright &copy; Kitty Galores 2022
+      </div>
+    </div>
+  </body>
+</html>
