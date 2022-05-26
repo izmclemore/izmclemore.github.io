@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Assignment 13</title>
+    <style>
+      .myGrid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-areas:
+          "myHeader myHeader myHeader myHeader myHeader"
+          "sidenav sidenav content content content"
+          "footer footer footer footer footer";
+
+      }
+      header {
+        background-color: lightgreen;
+        padding: 36px;
+        grid-area: myHeader;
+      }
+      nav {
+        background-color: #DDFFDD;
+        padding: 36px;
+        grid-area: sidenav;
+      }
+      main {
+        padding: 36px;
+        grid-area: content;
+      }
+      nav ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      footer{
+        background-color: green;
+        padding:5px;
+        grid-area: footer;
+      }
+
+      .catimage {
+        width:200px;
+        margin:24px;
+        opacity: 50%;
+      }
+      #bowTie {
+        float:right;
+      }
+      #squishy {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="myGrid">
+      <header>
+        <h1>This is how page layouts can be done with grids</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="aboutMe">About Me</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <div>
+        <img
+          id="bowTie"
+          class="catimage"
+          src="../images/FancyKitty.jpg"
+          alt="fancy cat">
+        <p>
+          Constias elit sed appellat firmissimum, multos firmissimum incurreret cillum commodo ubi fabulas est expetendis, deserunt nulla quorum hic illum, qui irure fugiat quae ingeniis, enim in ut fugiat
+          arbitror eu constias est pariatur, possumus e arbitror. Eu illum probant. Ingeniis an eram.Ne magna probant quamquam. Nulla si doctrina a nisi, o anim cillum malis litteris. Aut te illum aute labore
+          aut fugiat hic ingeniis in quid, sint aut ingeniis de minim, multos nostrud ubi litteris.
+        </p>
+          <img
+            id="squishy"
+            class="catimage"
+            src="../images/images.jpg"
+            alt="cartoon cat">
+        <p>
+          Ex eram malis ad consequat, constias id nisi, do constias praesentibus ab labore ex ingeniis est veniam. Cernantur esse summis voluptate dolore, in anim magna quis voluptate nam ad laboris
+          exercitation, aliquip noster culpa doctrina quis. Offendit veniam magna aut aute, cupidatat anim iudicem incididunt eu et si noster quorum amet, se magna doctrina voluptatibus. Quae excepteur iis
+          vidisse.Iis eram non amet, excepteur fugiat eiusmod. Anim ingeniis arbitrantur, de si noster export aute, amet e singulis qui anim, tamen pariatur hic despicationes, singulis summis eiusmod aliquip e
+          ullamco te velit pariatur do cupidatat aute noster do dolor ne consequat illum velit proident quis. Quibusdam quis ubi deserunt despicationes. Id cillum amet culpa commodo in dolor nostrud admodum,
+          legam admodum id laborum, possumus id occaecat in laboris de pariatur o laborum ab multos incididunt aut in ab cillum quid dolore a te labore expetendis praesentibus.
+        </p>
+      </main>
+      <footer>
+        <h2>@Kitty Galore 2022</h2>
+      </footer>
+    </div>
+  </body>
+</html>
