@@ -2,8 +2,59 @@
 <html lang="en-US">
   <head>
     <title>Gallery</title>
+    <style>
+      .myGrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(50px, auto);
+      grid-template-areas:
+        "myHeader myHeader myHeader myHeader"
+        "sidenav content content content";
+    }
+    header {
+      background-color: lightgreen;
+      padding: 36px;
+      grid-area: myHeader;
+      text-align: center;
+    }
+    nav {
+      background-color: #DDFFDD;
+      padding: 36px;
+      grid-area: sidenav;
+      font-family: sans-serif;
+    }
+    main {
+      padding: 36px;
+      grid-area: content;
+    }
+    img {
+      width: 400px;
+    }
+    footer {
+      background-color: lightgreen;
+    }
+    p {
+      font-family: sans-serif;
+    }
+    </style>
   </head>
   <body>
-    <h1>My work</h1>
+    <div class="myGrid">
+      <header>
+        <h1>Gallery</h1>
+      </header>
+      <nav>Take a look at some of my best work</nav>
+      <main>
+        <img src="../images/KittyLogo.jpg" alt=logocat>
+        <p>Cat Logo</p>
+        <img src="../images/ToxicLove.jpg" alt=makeupbrand>
+        <p>Toxic Love Cosmetic Logo</p>
+        <img src="../images/Wonderland.jpg" alt=aliceinwonderland>
+        <p>Alice in Wonderland Poster</p>
+        <img src="../images/Books.jpg" alt=bookcovers>
+        <p> Wishtree Book Covers</p>
+      </main>
+    </div>
+    <footer>Imani Mclemore</footer>
   </body>
 </html>

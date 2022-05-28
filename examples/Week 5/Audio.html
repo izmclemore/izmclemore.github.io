@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Audio and Video Example</title>
+    <style>
+      .smallVideo {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <audio controls loop>
+      <source src="../../Audio/TranquilDepths.mp3" type="audio/mpeg">
+      <source src="../../Audio/TranquilDepths.ogg" type="audio/ogg">
+      Your browser does not support the audio tag.
+    </audio>
+
+    <video
+    controls
+    loop
+    muted
+    poster="../../images/images.jpg"
+    class="smallVideo">
+      <source src="../../Video/video_BigBuckBunny.ogg" type="video/ogg">
+      <source src="../../Video/video_BigBuckBunny.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </body>
+</html>
