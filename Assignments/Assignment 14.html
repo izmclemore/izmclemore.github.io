@@ -2,6 +2,16 @@
 <html lang="en-US">
   <head>
     <title>Assignment 14</title>
+    <style>
+    #buttonButton input[type=submit] {
+      background: linear-gradient(to bottom, lightblue, blue);
+      border: 0.5px solid black;
+      border-radius: 10px;
+    }
+    #buttonButton input[type=submit]:active {
+      background:linear-gradient(to bottom, purple, pink);
+    }
+    </style>
   </head>
   <body>
     <form>
@@ -44,7 +54,7 @@
         </label>
       </div>
       <br>
-      <div>
+      <div id=buttonButton>
         <input type="submit" value="Click to submit!">
       </div>
     </form>
