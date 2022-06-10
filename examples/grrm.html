@@ -40,6 +40,9 @@
         display: inline-block;
         font-family: 'Montaga', serif;
       }
+      #socialSection {
+        text-align: center;
+      }
       nav {
         grid-area: navbar;
       }
@@ -93,6 +96,18 @@
       }
       main {
         grid-area: blog;
+        background-color: lightgrey;
+        padding: 24px;
+      }
+      main h2 {
+        font-family: 'Montaga', serif;
+      }
+      main h3 a,
+      main p a {
+        color: #1c4268;
+      }
+      main h3 a {
+        text-decoration: none;
       }
       footer {
         grid-area: footer;
@@ -139,6 +154,10 @@
         <header>
           <img src="../images/shield-spin.jpg">
           <h1> GOERGE R. R. MARTIN</h1>
+          <form>
+            <input type="text" id="searchbar" name="searchQuery" placeholder="Search...">
+            <input type="submit" id="searchButton" value="SEARCH">
+          </form>
         </header>
         <nav>
           <ul>
@@ -167,7 +186,26 @@
             <img src="../images/more-appearances.jpg" alt="more appearnces">
           </div>
         </aside>
-        <main>BLOGPOSTS</main>
+        <main>
+          <h2>CURRENT GRRM BLOG POSTS</h2>
+          <h3><a href="#">Six Days to Joe</a></h3>
+          <p>
+            Six days to go.  Six days to Joe. Leaphorn, that is. It is June 6 as I type this.   Next weekend, JUNE 12, will see the debut of DARK WINDS on AMC  and AMC+.
+            Yes, it has “Winds” in the… <a href="#">Read More>></a>
+          </p>
+          <h3><a href="#">Stonemaiden Is Back</a></h3>
+          <p>
+            There’s a brand new treat for Wild Cards fans over at Tor.com. “Hearts of Stone” is a terrific new novelette from Emma Newman.
+            It marks the return of Stonemaiden, the Cornish ace first introduced in KNAVES OVER QUEENS.
+            That was… <a href="#">Read More>></a>
+          </p>
+          <h3><a href="#">Here Come The Dragons</a></h3>
+          <p>
+            Are those dragons I see? Yes indeed. It’s May, which means the August 21 premiere of HOUSE OF THE DRAGON is only a few months away.
+            And HBO has just released a new trailer,
+             to give you another taste of… <a href="#">Read More>></a>
+          </p>
+        </main>
         <footer>FOOTER</footer>
         <div id="bottom">BOTTOM</div>
     </div>
