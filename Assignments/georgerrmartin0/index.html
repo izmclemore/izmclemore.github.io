@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>GRRM Redesign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+    <style>
+    body {
+      background-image: url(../images/Granite.jpg);
+      background-size: cover;
+    }
+      #gridLayout {
+        display: grid;
+        grid-template-columns: 1fr repeat(3,333px) 1fr;
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas:
+          ". header header header ."
+          ". navbar navbar navbar ."
+          ". banner banner banner ."
+          ". cards  cards  cards  ."
+          ". aside  blog   blog   ."
+          ". footer footer footer ."
+          ". bottom bottom bottom .";
+      }
+      header,
+      nav,
+      #bannerContainer,
+      #cardsContainer,
+      aside,
+      main,
+      footer,
+      #bottom {
+        border: 1px solid grey;
+      }
+      header {
+        grid-area: header;
+      }
+      header h1 {
+        display: inline-block;
+        font-family: 'Montaga', serif;
+        color:#1c4268 ;
+        font-size: 40px;
+      }
+      #socialSection {
+        text-align: right;
+      }
+      #shieldImage:hover {
+        animation: spin 1s infinite;
+      }
+      @keyframes spin{
+        0% {
+          transform: scaleX(1);
+        }
+        50% {
+          transform: scaleX(-1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      nav {
+        grid-area: navbar;
+      }
+      nav ul {
+        list-style-type: none;
+        padding:0px;
+        margin: 0px;
+        display: flex;
+        justify-content: space-between;
+      }
+      nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-family: 'Montaga', serif;
+      }
+      nav ul li:hover {
+        background-color: lightgrey;
+        opacity: 70%;
+        margin: 0px;
+
+        }
+      #searchButton {
+        background-color: midnightblue;
+        color: white;
+      }
+      #bannerContainer {
+        grid-area: banner;
+      }
+      #bannerContainer img {
+        width: 100%;
+      }
+      #cardsContainer {
+        grid-area: cards;
+        display: flex;
+      }
+      #cardsContainer img {
+        flex-grow: 1;
+      }
+      aside {
+        grid-area: aside;
+      }
+      #moreAppearancesContainer {
+        background-image: url(../images/events-bg.jpg);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-color: black;
+        padding: 24px;
+      }
+      #moreAppearancesContainer h3 {
+        font-family: 'Montaga', serif;
+        color: white;
+      }
+      .yellow {
+        color: #dbbf73;
+      }
+      .underline {
+        text-decoration: underline;
+      }
+      .white {
+        color: white;
+      }
+      #nextPublicationContainer  {
+        background-image: url(../images/publication-bg.jpg);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        height: 246px;
+      }
+      #nextPub {
+      margin-top: 10px;
+      margin-right: 30px;
+      margin-left: 40px;
+      }
+      #nextPublicationContainer p {
+        font-family: 'Montaga', serif;
+        color: #92add1;
+      }
+      #nextPublicationContainer p2,
+      #nextPublicationContainer p3,
+      #nextPublicationContainer p4 {
+        font-family: 'Arial', sans-serif;
+      }
+      #nextPublicationContainer p2,
+      #nextPublicationContainer p3 {
+        color: white;
+      }
+      #nextPublicationContainer p4 {
+          color: #a1a1a1;
+          font-size: 12px;
+        }
+    #nextPublicationContainer #wildCard {
+        float: left;
+        width: 70px;
+        height: auto;
+        margin: 20px 20px 20px 40px;
+      }
+      #viewButtton {
+          margin: 20px 20px 20px 40px;
+      }
+      #throneContainer img {
+        width: 100%;
+        }
+      #coach img {
+        width: 100%;
+      }
+      main {
+        grid-area: blog;
+        background-color: lightgrey;
+        padding: 24px;
+      }
+      main h2 {
+        font-family: 'Montaga', serif;
+        color: #1c4268;
+      }
+      main h3 a,
+      main p a {
+        color: #1c4268;
+      }
+      main h3 a {
+        text-decoration: none;
+      }
+      footer {
+        grid-area: footer;
+      }
+      footer p {
+        text-align: center;
+      }
+      #bottomContainer {
+        grid-area: bottom;
+      }
+      #bottomContainer img {
+      width: 100%;
+      background-size: contain;
+
+      }
+
+
+      @media screen and (max-width: 1000px) {
+        #gridLayout {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "header"
+            "navbar"
+            "banner"
+            "blog"
+            "cards"
+            "aside"
+            "footer"
+            "bottom";
+        }
+        header {
+          text-align: center;
+        }
+        header h1 {
+          display: block;
+        }
+        #socialSection{
+          text-align: center;
+        }
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+        #cardsContainer {
+          flex-direction: column;
+        }
+        #cardsContainer img {
+          flex-grow: 0;
+          width: 100%
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gridLayout">
+        <header id="branding">
+          <img src="../images/shield-spin.jpg" id="shieldImage" alt="shield">
+          <h1> GEORGE R. R. MARTIN</h1>
+          <div id="socialSection">
+            <img src="../images/facebook.jpg" alt="facebook">
+            <img src="../images/twitter.jpg" alt="twitter">
+            <img src="../images/app.jpg" alt="crown">
+          </div>
+          <form>
+            <input type="text" id="searchbar" name="searchQuery" placeholder="Search...">
+            <input type="submit" id="searchButton" value="SEARCH">
+          </form>
+        </header>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Not A Blog</a></li>
+            <li><a href="#">About George</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">For Fans</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Merchandise</a></li>
+          </ul>
+        </nav>
+        <section id="bannerContainer">
+          <img src="../images/WolfSpirit.jpg" alt="wolf">
+        </section>
+        <section id="cardsContainer">
+          <img src="../images/Cocteau.jpg" alt="Jean">
+          <img src="../images/Newsletter.png" alt="news">
+          <img src="../images/DarkSword.jpg" alt="darksword miniatures">
+        </section>
+        <aside>
+          <div id="moreAppearancesContainer">
+            <h3>NEXT APPEARANCE</h3>
+            <p class="yellow">August 26-28th 2022</p>
+            <p><span class="underline white">Bubonicon 53</span> <span class="white">Guest</span></p>
+            <img src="../images/more-appearances.jpg" alt="more appearances">
+          </div>
+          <div id="nextPublicationContainer">
+            <img src="../images/next pub title.png" alt="pub title" id="nextPub">
+            <img src="../images/wildcards.jpg" id="wildCard" alt="wildbook">
+            <p>June 15,2022</p>
+            <p2>WILD CARDS Marvel</p2>
+            <p3>Comic Book 1</p3>
+            <p4>(Comic Monthly)</p4>
+            <img src="../images/view-pubs.png" alt="view button" id="viewButtton">
+          </div>
+          <div id="throneContainer">
+            <img src="../images/valyrian-steel.jpg" alt="gameofThrones" id="steel">
+          </div>
+          <div id="coach">
+            <img src="../images/stagecoach.jpg" alt="horse">
+          </div>
+        </aside>
+        <main>
+          <h2>CURRENT GRRM BLOG POSTS</h2>
+          <h3><a href="#">Six Days to Joe</a></h3>
+          <p>
+            Six days to go.  Six days to Joe. Leaphorn, that is. It is June 6 as I type this.   Next weekend, JUNE 12, will see the debut of DARK WINDS on AMC  and AMC+.
+            Yes, it has “Winds” in the… <a href="#">Read More>></a>
+          </p>
+          <h3><a href="#">Stonemaiden Is Back</a></h3>
+          <p>
+            There’s a brand new treat for Wild Cards fans over at Tor.com.
+            “Hearts of Stone” is a terrific new novelette from Emma Newman.
+            It marks the return of Stonemaiden, the Cornish ace first introduced in KNAVES OVER QUEENS.
+            That was… <a href="#">Read More>></a>
+          </p>
+          <h3><a href="#">Here Come The Dragons</a></h3>
+          <p>
+            Are those dragons I see? Yes indeed.
+            It’s May, which means the August 21 premiere of HOUSE OF THE DRAGON is only a few months away.
+            And HBO has just released a new trailer,
+             to give you another taste of… <a href="#">Read More>></a>
+          </p>
+          <h3><a href="#">THE RISE OF THE DRAGON</a></h3>
+          <p>
+            We’re so excited to announce The Rise of The Dragon,
+            a lavish visual history of House Targaryen – the iconic family at the heart of
+            HBO’s Game of Thrones prequel series, House of the Dragon – featuring over 180 all-new… <a href="#">Read More>></a>
+          </p>
+          <h3><a href="#">Dealer Takes Two</a></h3>
+          <p>
+          Kings and deuces may not be as iconic… or ominous…
+          a poker hand as aces and eights, but it’s not a bad hand to be dealt…
+          and Tor will be dealing those cards to all the Wild Cards fans out…  <a href="#">Read More>></a>
+          </p>
+          <img src="../images/not-a-blog.png" alt="not blog">
+        </main>
+        <footer id="footer">
+          <p>© 2022 GEORGE R.R. MARTIN. ALL RIGHTS RESERVED.</p>
+        </footer>
+        <div id="bottomContainer">
+          <img src="../images/footer-bg.jpg" alt="faceMarble">
+        </div>
+    </div>
+  </body>
+</html>
