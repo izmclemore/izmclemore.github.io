@@ -2,8 +2,156 @@
 <html lang="en-US">
   <head>
     <title>Contact</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <style>
+    header {
+      background-color:rgba(221, 214, 243, 0.7);
+      padding: 20px;
+    }
+    h1 {
+      font-size: 60px;
+      font-family: rubik;
+      font-weight: lighter;
+      text-align: center;
+      color: rgba(250, 172, 168, 0.7);
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke:2px;
+    }
+    section {
+      text-align: center;
+      font-family: karla;
+      font-size: 12px;
+    }
+    h2 {
+      text-align: center;
+      font-family: karla;
+      margin-top: 40px;
+    }
+    .textInput label {
+      display: block;
+      font-family: karla;
+      text-align: center;
+    }
+    .textInput input {
+      margin: 4px 0px 12px 0px;
+      padding: 8px;
+    }
+    .textInput input:focus-visible {
+      outline: 0;
+      background-color: pink;
+    }
+    #firstNameContainer input,
+    #firstNameContainer label,
+    #lastNameContainer label,
+    #lastNameContainer input {
+      display: inline-block;
+      margin-left: 470px;
+      width: 220px;
+    }
+    #firstNameContainer input {
+      border: 0.5px solid black;
+      border-radius: 4px;
+    }
+    #lastNameContainer input {
+      border: 0.5px solid black;
+      border-radius: 4px;
+    }
+    textarea {
+      font-family: karla, sans-serif;
+      margin-top: 20px;
+      padding: 50px;
+      display: inline-block;
+      margin-left: 400px;
+      width: 380px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    .popupTrigger {
+      cursor: pointer;
+      text-align: center;
+      font-family: karla;
+    }
+    #popupContainer {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+    #popupContainer.popupOpen {
+      display: flex;
+    }
+    #popupBackground {
+      background-color: pink;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    #popup {
+      background-color: white;
+      border: 3px solid black;
+      border-radius: 24px;
+      padding: 36px;
+      position: relative;
+      text-align: center;
+      min-width: 400px;
+      z-index: 1;
+    }
+    #popup .closePopup {
+      cursor: pointer;
+      margin-top: 40px;
+      text-decoration: underline;
+    }
+    </style>
   </head>
   <body>
-    <h1>email, phone, social media</h1>
+    <header>
+      <h1>Contact Me</h1>
+    </header>
+    <section>
+      <p>Email: izmclemore@comcast.net</p>
+      <p>Phone:(904)-386-8104</p>
+    </section>
+    <h2>Message Me</h2>
+    <div id="firstNameContainer" class="textInput">
+      <label for="firstNameId">First Name:</label>
+      <input type="text" id="firstNameId" name="firstname">
+    </div>
+    <div id="lastNameContainer" class="textInput">
+      <label for="lastNameId">Last Name:</label>
+      <input type="text" id="lastNameId" name="lastname">
+    </div>
+    <div>
+      <textarea id="codeFeelingsId" name="codeFeelings"></textarea>
+    </div>
+
+
+
+    <div class="popupTrigger">Send</div>
+      <div id="popupContainer">
+        <div id="popupBackground" class="closePopup"></div>
+        <div id="popup">
+          <div>Thank you!</div>
+          <div class="closePopup">Close</div>
+        </div>
+      </div>
+    <script type="text/javascript">
+    $(".popupTrigger").click(
+      function() {
+        $("#popupContainer").addClass("popupOpen");
+      }
+    );
+    $(".closePopup").click(
+      function() {
+        $("#popupContainer").removeClass("popupOpen");
+      }
+    );
+    </script>
   </body>
 </html>

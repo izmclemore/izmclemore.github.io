@@ -5,36 +5,38 @@
     <style>
       .myGrid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       grid-auto-rows: minmax(50px, auto);
       grid-template-areas:
         "myHeader myHeader myHeader myHeader"
         "sidenav content content content";
     }
+
     header {
-      background-color: lightgreen;
+      background-color:rgba(221, 214, 243, 0.7) ;
       padding: 36px;
       grid-area: myHeader;
       text-align: center;
     }
+    header h1 {
+      font-family: rubik;
+      font-weight: lighter;
+      color:rgba(250, 172, 168, 1);
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke:1px;
+    }
     nav {
-      background-color: #DDFFDD;
-      padding: 36px;
+      background-color: rgba(221, 214, 243, 0.3) ;
+      padding: 16px;
       grid-area: sidenav;
-      font-family: sans-serif;
     }
-    main {
-      padding: 36px;
+    main img{
+      padding: 16px;
       grid-area: content;
-    }
-    img {
-      width: 400px;
+      width:400px;
     }
     footer {
-      background-color: lightgreen;
-    }
-    p {
-      font-family: sans-serif;
+    color:hotpink;
     }
     </style>
   </head>
@@ -43,18 +45,19 @@
       <header>
         <h1>Gallery</h1>
       </header>
-      <nav>Take a look at some of my best work</nav>
+      <nav></nav>
       <main>
         <img src="../images/KittyLogo.jpg" alt=logocat>
-        <p>Cat Logo</p>
         <img src="../images/ToxicLove.jpg" alt=makeupbrand>
-        <p>Toxic Love Cosmetic Logo</p>
         <img src="../images/Wonderland.jpg" alt=aliceinwonderland>
-        <p>Alice in Wonderland Poster</p>
         <img src="../images/Books.jpg" alt=bookcovers>
-        <p> Wishtree Book Covers</p>
+
+        <img src="../images/Collage.jpg" alt=collage>
+        <img src="../images/creativetext.jpg" alt=heartshape>
+        <img src="../images/Jaguar.jpg" alt=jaguar>
+        <img src="../images/Icon.png" alt=kawaii>
       </main>
     </div>
-    <footer>Imani Mclemore</footer>
+    <footer>© 2022 Imani Mclemore/MZI Designs</footer>
   </body>
 </html>
