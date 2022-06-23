@@ -40,10 +40,13 @@
       outline: 0;
       background-color: pink;
     }
+    #firstNameContainer,
+    #lastNameContainer {
+      text-align: center;
+    }
     #firstNameContainer input,
     #lastNameContainer input {
-      display: block;
-      margin-left: 400px;
+      display: inline-block;
       width: 280px;
     }
 
@@ -59,8 +62,11 @@
       font-family: karla, sans-serif;
       margin-top: 20px;
       padding: 50px;
-      margin-left: 320px;
+      display: inline-block;
       width: 450px;
+    }
+    #textareaContainer {
+      text-align: center;
     }
 
     * {
@@ -106,6 +112,49 @@
       margin-top: 40px;
       text-decoration: underline;
     }
+    nav ul {
+      list-style-type: none;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline-block;
+      margin: 4px 20px;
+      margin-top: 80px;
+    }
+
+    ul li a {
+        color: darkmagenta;
+        text-decoration: none;
+        font-family: kalra, sans-serif;
+        text-shadow: 1px 1px 4px hotpink;
+      }
+    ul li a:hover {
+        color: white;
+      }
+      @media screen and (max-width: 480px) {
+        #firstNameContainer input,
+        #lastNameContainer input {
+          display: inline-block;
+          width: 180px;
+        }
+        textarea {
+          font-family: karla, sans-serif;
+          margin-top: 20px;
+          padding: 50px;
+          display: inline-block;
+          width: 250px;
+        }
+
+        h1 {
+          font-size: 40px;
+          font-family: rubik;
+          font-weight: lighter;
+          text-align: center;
+          color: rgba(250, 172, 168, 0.7);
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke:2px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -125,10 +174,9 @@
       <label for="lastNameId">Last Name:</label>
       <input type="text" id="lastNameId" name="lastname">
     </div>
-    <div>
+    <div id="textareaContainer">
       <textarea id="codeFeelingsId" name="codeFeelings"></textarea>
     </div>
-
 
 
     <div class="popupTrigger">Send</div>
@@ -139,6 +187,21 @@
           <div class="closePopup">Close</div>
         </div>
       </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="templates/Portfolio.html">Home</a>
+          </li>
+          <li>
+            <a href="templates/gallery.html">Gallery</a>
+          </li>
+          <li>
+            <a href="templates/aboutme.html">About Me</a>
+          </li>
+        </ul>
+      </nav>
+
     <script type="text/javascript">
     $(".popupTrigger").click(
       function() {

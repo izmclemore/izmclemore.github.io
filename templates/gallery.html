@@ -25,6 +25,13 @@
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke:1px;
     }
+    h1 {
+      font-size: 60px;
+    }
+    nav ul {
+      list-style-type: none;
+      text-align: center;
+    }
     nav {
       background-color: rgba(221, 214, 243, 0.3) ;
       padding: 16px;
@@ -38,6 +45,32 @@
     footer {
     color:hotpink;
     }
+    nav ul li {
+      display: inline-block;
+      margin: 4px 20px;
+      margin-bottom: 80px;
+      margin-top: 0px;
+    }
+
+    ul li a {
+        color: darkmagenta;
+        text-decoration: none;
+        font-family: kalra, sans-serif;
+        text-shadow: 1px 1px 4px hotpink;
+      }
+    ul li a:hover {
+        color: white;
+      }
+        @media screen and (max-width: 480px) {
+          h1 {
+            font-size: 40px;
+          }
+          main img{
+            padding: 16px;
+            grid-area: content;
+            width:300px;
+        }
+
     </style>
   </head>
   <body>
@@ -58,6 +91,19 @@
         <img src="../images/Icon.png" alt=kawaii>
       </main>
     </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="templates/Portfolio.html">Home</a>
+        </li>
+        <li>
+          <a href="templates/aboutme.html">About Me</a>
+        </li>
+        <li>
+          <a href="templates/contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
     <footer>© 2022 Imani Mclemore/MZI Designs</footer>
   </body>
 </html>

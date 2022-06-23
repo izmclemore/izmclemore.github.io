@@ -19,6 +19,7 @@
       font-size: 90px;
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke:4px;
+      text-shadow: 2px 2px 4px hotpink;
     }
     header {
       text-align: center;
@@ -38,10 +39,10 @@
     }
 
     ul li a {
-        color:ghostwhite;
+        color: darkmagenta;
         text-decoration: none;
         font-family: kalra, sans-serif;
-        text-shadow: 2px 2px 4px hotpink;
+        text-shadow: 1px 1px 4px hotpink;
       }
     ul li a:hover {
         color: white;
@@ -57,6 +58,38 @@
         font-family: karla,sans-serif;
         margin-top: 170px;
         color: hotpink;
+      }
+      @media screen and (max-width: 480px) {
+        body {
+        height: 100vh;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(45deg,
+        rgba(221, 214, 243, 0.7),
+        rgba(250, 172, 168, 0.7)),
+        url(images/graphicdesign.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        h1 {
+          color: ghostwhite;
+          font-family: rubik;
+          font-size: 60px;
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke:4px;
+        }
+          p {
+            font-size: 38px;
+            text-align: center;
+            font-style: italic;
+            font-family: karla;
+            color: white;
+          }
+          footer {
+            font-family: karla,sans-serif;
+            margin-top: 170px;
+            color: hotpink;
+          }
       }
     </style>
   </head>
